@@ -1,0 +1,156 @@
+\documentclass{ams-journal}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+\graphicspath{{figures/}{../cross_sim/figures/}}
+\newcommand{\DG}{\Delta G}
+\newcommand{\Areq}{A_{\rm req}}
+\newcommand{\Aqual}{A_{\rm qual}}
+\newcommand{\HB}{H_{\rm B}}
+
+\title{Supplementary Material: Assessing Decision Reliability in Discrete-Event Simulation}
+\addauthor{David Vesterlund\textsuperscript{1*}}
+\affiliation{\textsuperscript{1}Vesterlund Ventures, WestQuant Open}
+\corresponding{david@vesterlundventures.se}
+
+\begin{document}
+
+\maketitle
+
+This document contains supplementary material for the main manuscript ``Assessing Decision Reliability in Discrete-Event Simulation: A Quantum-Network Case Study.'' It provides the reporting standard and Trust Stack checklist, reviewer and researcher recommendations, the claim reproduction matrix, and the standard event-trace format.
+
+% ============================================================
+\section{Standard: A Checklist for Reporting}
+\label{sec:standard}
+
+\subsection{Reporting Standard for Bottleneck Diagnoses}
+
+We propose that any bottleneck diagnosis should report:
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Intervention strength} $\delta$ used for each resource.
+\item \textbf{Number of seeds} and whether common random numbers were used.
+\item \textbf{Performance metric} ($\Areq$ or $\Aqual$) and fidelity threshold $F_{\min}$.
+\item \textbf{Queueing model} (concurrent, sequential, or other).
+\item \textbf{Soft bottleneck vector} $p_j$ with uncertainty (e.g., bootstrap CI), not just the argmax label.
+\item \textbf{Bottleneck entropy} $\HB$ to indicate whether the label is separable or diffuse.
+\item \textbf{Degenerate cases} reported separately, not assigned an arbitrary label.
+\end{enumerate}
+
+\subsection{Trust Stack Checklist}
+
+We propose a Trust Stack checklist for reporting simulation-based conclusions. Each row identifies what the manuscript itself fulfills (Table~\ref{tab:truststack}).
+
+\begin{table*}[t]
+\centering
+\caption{Trust Stack checklist. Each row identifies a trust level, what it requires, and what this manuscript fulfills.}
+\label{tab:truststack}
+\small
+\begin{tabularx}{\textwidth}{p{1.2cm}p{3.5cm}p{4cm}p{4cm}}
+\toprule
+Level & Name & Requirement & This manuscript \\
+\midrule
+L1 & Physics verification & Analytical benchmarks for physical primitives & B0 gate: harmonized model passes ($\epsilon_{\rm abs} < 0.02$); WQ fails B0 due to retrieval-in-delivery semantics (documented in the B0 gate) \\
+L2 & Semantic transparency & Document all protocol-semantic choices & Semantic-dimensions table: 9 dimensions documented for both systems \\
+L3 & Canonical workloads & Run standardized benchmark ladder & B0--B6 ladder (3,950 + 3,840 scenarios), all levels reported \\
+L4 & Standard event traces & Export structured event traces & SHA-256 trace hashing for SeQUeNCe/SimQN identity; format in Appendix \\
+L5 & Common experiment specification & Accept CES-format input & CES defined and used across all implementations \\
+L6 & Model uncertainty reporting & Report model sensitivity alongside point estimates & $\tau$, $\kappa$, $\Delta_m$, cluster bootstrap CIs reported throughout \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{Recommendations for Reviewers}
+
+Based on the findings of this study, we recommend that reviewers of simulation-based quantum-network papers:
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Require semantic transparency.} A paper that uses simulation should document the protocol semantics of the simulator, not just the parameter values. If the semantics are not documented, the paper is not reproducible. The semantic-dimensions table provides a template.
+
+\item \textbf{Ask whether the conclusion is structural or model-sensitive.} A structural conclusion (ranking, monotonicity) can be supported by a single simulator. A model-sensitive conclusion (threshold, magnitude) should be validated across simulators. The claim reproduction matrix (Table~\ref{tab:claim_matrix}) provides a template for classifying conclusions.
+
+\item \textbf{Request cross-simulator comparison for contention-dominated claims.} If the paper claims a capacity-planning result based on a contention-dominated regime, ask whether the result survives a model change. This study shows that 50.8\% of configurations show $\geq 4\times$ $m_c$ disagreement.
+
+\item \textbf{Require provenance.} CES scenarios, event traces, and software versions should be archived as supplementary material. A paper without provenance is a claim without evidence.
+\end{enumerate}
+
+\subsection{Recommendations for Researchers}
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Report rankings, not just absolute values.} Rankings are more robust across model changes than absolute values. A conclusion that ``family A outperforms family B'' is more likely to survive a model change than ``family A achieves $\Aqual = 0.37$.''
+
+\item \textbf{Do not compare latency across implementations without harmonizing definitions.} The timing definition must be documented and matched. If the definitions differ, report the difference as a definition mismatch, not a model disagreement.
+
+\item \textbf{Treat capacity-planning conclusions as model-dependent.} Report $m_c$ as a range or with model-sensitivity analysis, not as a single number. This study shows that $m_c$ can differ by $\geq 4\times$ in 50.8\% of configurations.
+
+\item \textbf{Report the validation level.} State which level of the benchmark ladder (B0--B6) the conclusion claims, and what evidence supports it. A claim at B6 requires cross-model evidence; a claim at B0 does not.
+
+\item \textbf{Use cluster bootstrap CIs for cross-simulator comparisons.} Resample configurations (not individual seeds) to avoid pseudoreplication. When CIs include zero, the effect should be reported as not statistically significant.
+\end{enumerate}
+
+% ============================================================
+\section{Claim Reproduction Matrix}
+\label{sec:claim_matrix}
+
+Table~\ref{tab:claim_matrix} summarizes the three-class taxonomy with the verdict for each claim.
+
+\begin{table*}[t]
+\centering
+\caption{Claim Reproduction Matrix with three-class taxonomy.}
+\label{tab:claim_matrix}
+\begin{tabular}{lp{3.5cm}p{2.8cm}p{3cm}}
+\toprule
+Claim & Verdict & Class & Evidence \\
+\midrule
+C1: Memory-family ranking (4 profiles) & REPLICATED & Structural & $\tau = 1.0$, perfect ranking agreement \\
+C2: Topology ranking & REPLICATED & Structural & $\tau = 1.0$, perfect ranking agreement \\
+C3a: Monotonicity of $A(m)$ & REPLICATED & Structural & 100\% monotonicity both models \\
+C3b: Diminishing returns & UNRESOLVED & --- & B6 $m$ grid too coarse \\
+C4a: $m_c$ regime-dependence & STRUCTURALLY REPLICATED & Structural & Both agree which families need more memory \\
+C4b: $m_c$ numerical values & MODEL-SENSITIVE & Model-sensitive & 50.8\% $\geq 4\times$ disagreement \\
+C5: Scalar collapse failure & STRUCTURALLY REPLICATED & Structural & $R^2 < 0.2$ both models \\
+Latency ranking & NOT COMPARABLE & Definition-sensitive & $\tau = -0.29$, timing definition mismatch \\
+Finite-memory contention & NOT REPLICATED & Model-sensitive & $\tau = 0.17$ in B4 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ============================================================
+\section{Standard Event Trace Format}
+\label{app:trace}
+
+A standard event-trace format enables diagnostic comparison: when two simulators disagree, the event traces can be compared event-by-event to identify where and why the divergence occurs. Table~\ref{tab:trace} shows the proposed format.
+
+\begin{table}[t]
+\centering
+\caption{Proposed standard event-trace format.}
+\label{tab:trace}
+\begin{tabular}{ll}
+\toprule
+Field & Description \\
+\midrule
+timestamp & Simulation time of event \\
+scenario\_id & CES scenario identifier \\
+request\_id & Unique request identifier \\
+node\_id & Node where event occurs \\
+event\_type & generate, swap, deliver, reject, timeout, \ldots \\
+memory\_slot & Memory slot index (if applicable) \\
+link\_id & Link identifier (if applicable) \\
+fidelity\_before & Fidelity before event \\
+fidelity\_after & Fidelity after event \\
+resource\_state & Memory occupancy, queue length \\
+cause & Reason for event (if applicable) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In this study, event traces were used to verify the SeQUeNCe--SimQN bit-identity (SHA-256 hashing across all tested scenarios). The trace format is available in the repository and can be used for event-by-event diagnostic comparison when models diverge.
+
+\bibliographystyle{AMS_style}
+\bibliography{references}
+
+\end{document}
