@@ -1,11 +1,11 @@
-Cover Letter — Paper 2
-=======================
+Cover Letter — Paper 2 (AMS Journal)
+=====================================
 
-To the Editor, Simulation Modelling Practice and Theory
+To the Editor, Applications of Modelling and Simulation
 
 Dear Editor,
 
-I submit the manuscript "Assessing Decision Reliability in Discrete-Event Simulation: A Quantum-Network Case Study" for consideration at Simulation Modelling Practice and Theory.
+I submit the manuscript "Assessing Decision Reliability in Discrete-Event Simulation: A Quantum-Network Case Study" for consideration at Applications of Modelling and Simulation.
 
 The manuscript presents a workflow for separating stochastic repeatability, analyst-choice sensitivity, model dependence, and metric-definition incompatibility in discrete-event simulation. The methodological contribution is an auditable procedure with explicit estimands, campaign identifiers, independent selection/evaluation seeds, and claim-level provenance. A quantum-network case study illustrates the approach.
 
@@ -16,6 +16,11 @@ A companion manuscript, "Memory Physics, Finite Capacity, and Topology in Hetero
 The raw simulation datasets, frozen simulator, and figure-generation scripts are being prepared for a public reproducibility release. Full native-protocol execution and hardware validation remain future work.
 
 I declare no external funding. I am the developer of the WestQuant simulator, which creates a potential conflict of interest.
+
+Suggested reviewers:
+1. [To be provided]
+2. [To be provided]
+3. [To be provided]
 
 Sincerely,
 David Vesterlund

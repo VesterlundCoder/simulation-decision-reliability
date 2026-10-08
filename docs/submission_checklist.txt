@@ -1,23 +1,33 @@
-Submission Checklist — Paper 2 (SMPT)
-=======================================
+Submission Checklist — Paper 2 (AMS Journal)
+=============================================
 
 Date: 8 October 2026
 Status: NOT YET READY
 
+JOURNAL: Applications of Modelling and Simulation (AMS)
+eISSN: 2600-8084
+Publisher: ARQII Publication
+URL: https://arqiipubl.com/ojs/index.php/AMS_Journal
+
 MANUSCRIPT:
 [x] Title: "Assessing Decision Reliability in Discrete-Event Simulation"
-[x] Abstract matches PDF
-[x] Date: 8 October 2026
+[x] Abstract: max 200 words (trimmed to 200)
+[x] Keywords: max 5, semicolon-separated
 [x] Author: David Vesterlund, Vesterlund Ventures, WestQuant Open
 [x] ORCID: 0009-0000-6455-1141
 [x] Email: david@vesterlundventures.se
+[x] AMS class (ams-journal.cls) used
+[x] BibTeX with AMS_style.bst
 [x] Compiles with tectonic (exit 0)
 [x] No undefined references
-[x] No overfull tables
 [x] All figures present in figures/
 
+LENGTH:
+[x] Body: ~4,584 words (limit: 5,500-6,500)
+[ ] Pages: max 12 (to verify after compilation)
+
 CONTENT:
-[x] Title updated to SMPT framing
+[x] Title updated to AMS framing
 [x] Abstract updated to conservative version
 [x] Conclusion updated to match PDF
 [x] D6 variant labels clarified (D6-S/D6-P)
@@ -29,14 +39,11 @@ CONTENT:
 [x] Honest data availability statement
 [x] Companion work disclosure
 
-JOURNAL REQUIREMENTS:
-[ ] SMPT Guide for Authors verified
-[ ] Article type confirmed
-[ ] Abstract format confirmed
-[ ] Keywords confirmed
-[ ] Highlights prepared
-[ ] Reference style confirmed
-[ ] AI declaration confirmed
+AMS BACK MATTER:
+[x] Acknowledgement and Funding
+[x] Declaration of Conflicting Interests
+[x] Data Availability
+[x] References (BibTeX, no et al., no abbreviations)
 
 REPRODUCIBILITY:
 [ ] Raw data deposited
@@ -47,6 +54,12 @@ REPRODUCIBILITY:
 [ ] Public release URL obtained
 [ ] Archival DOI obtained
 
+SUBMISSION REQUIREMENTS:
+[x] First submission in PDF format
+[ ] Suggest 3 potential reviewers (Name, Institution, Email)
+[ ] Submit through OJS at https://arqiipubl.com/ojs/index.php/AMS_Journal
+
 BLOCKERS:
 1. Data deposit not yet done
-2. Journal instructions not yet verified (403 errors)
+2. Page count needs verification (max 12 pages)
+3. 3 suggested reviewers needed for submission
