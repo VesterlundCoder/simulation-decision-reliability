@@ -1,0 +1,21 @@
+claim_id,manuscript_location,claim,experiment_id,data_source,code_revision,analysis_script,result,uncertainty,status
+C001,abstract,400 configurations two-pool experiment,ab_experiment,ab_results,unknown,ab_experiment.py,400,n/a,QUALIFIED
+C002,abstract,71.5% single-seed agreement,ab_experiment,ab_results,unknown,ab_analysis.py,0.715,n/a,QUALIFIED
+C003,abstract,95.8% 20-seed averaging agreement,ab_experiment,ab_results,unknown,ab_analysis.py,0.958,n/a,QUALIFIED
+C004,abstract,full protocol matches same-budget averaging,ab_experiment,ab_results,unknown,ab_analysis.py,0.958=0.958,n/a,QUALIFIED
+C005,abstract,50.8% of 356 interior cases differ >=4x,mc_comparison,mc_results,unknown,mc_analysis.py,50.8% [37.4,63.9],95% CI,QUALIFIED
+C006,abstract,two framework adapters share reference logic,simulator_frameworks,n/a,n/a,n/a,Smodels=2,n/a,VERIFIED
+C007,abstract,not independent model replications,simulator_frameworks,n/a,n/a,n/a,bit-identical traces,n/a,VERIFIED
+C008,abstract,full native-protocol validation future work,independent_validation,n/a,n/a,n/a,not done,n/a,VERIFIED
+C009,body,50.7% any-change at 2000 requests,noise_fragility,noise_results,unknown,noise_analysis.py,50.7%,n/a,QUALIFIED
+C010,body,42.0% label change across intervention strengths,analyst_choices,analyst_results,unknown,analyst_analysis.py,42.0%,n/a,QUALIFIED
+C011,body,35.5% across metric/threshold combinations,analyst_choices,analyst_results,unknown,analyst_analysis.py,35.5%,n/a,QUALIFIED
+C012,body,D6-S serial generation 1s cutoff,d6_capacity,d6_results,unknown,d6_decision_transfer.py,D6-S,n/a,VERIFIED
+C013,body,D6-P parallel generation 1e9s cutoff,d6_capacity,d6_results,unknown,d6_decision_transfer.py,D6-P,n/a,VERIFIED
+C014,body,D6 capacity 258 retained of 360,d6_capacity,d6_results,unknown,d6_decision_transfer.py,258/360,n/a,QUALIFIED
+C015,body,D6 placement 82 retained of 120,d6_placement,d6_results,unknown,d6_decision_transfer.py,82/120,n/a,QUALIFIED
+C016,body,Cohen kappa 0.210 model-variant,model_agreement,model_results,unknown,kappa_analysis.py,0.210,n/a,QUALIFIED
+C017,body,72%/28%/7% variance fractions,factorial,factorial_results,unknown,factorial_analysis.py,removed,n/a,REMOVED
+C018,body,robust optimization negative result,robust_opt,n/a,n/a,n/a,removed,n/a,REMOVED
+C019,body,0 events in 150 runs,native_pilot,n/a,n/a,n/a,removed,n/a,REMOVED
+C020,body,mc absolute 95% threshold,mc_comparison,mc_results,unknown,mc_analysis.py,relative-to-best,n/a,VERIFIED

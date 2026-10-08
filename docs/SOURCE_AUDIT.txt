@@ -1,0 +1,47 @@
+SOURCE AUDIT — Paper 2 (SMPT)
+================================
+
+Date: 8 October 2026
+
+MANUSCRIPT FILES:
+- paper_2_smpt.tex (LaTeX source, updated 8 Oct 2026)
+- paper_2_smpt.pdf (compiled PDF)
+
+FIGURES:
+- fig_b1_decomposition.png — bottleneck decomposition
+- fig_b1_distribution.png — bottleneck distribution
+- fig_b2_stochastic.png — stochastic fragility
+- fig_b3_finite_size_scaling.png — finite-size scaling
+- fig_b3_intervention.png — intervention analysis
+- fig_b5_confusion.png — model-variant confusion matrix
+- (additional figures in manuscript/figures/)
+
+ANALYSIS SCRIPTS:
+- ab_experiment.py — A/B experiment
+- ab_experiment_interventions.py — intervention definitions
+- magnitude_diagnosis.py — magnitude diagnosis
+- kappa_full_interventions.py — Cohen's kappa analysis
+- longer_runs.py — convergence/longer-run analysis
+
+DATA SOURCES:
+- A/B experiment: 400 configs × 40 seeds × 8 runs = 128,000 nominal
+- Pilot: 40 configs × 5 seeds
+- Noise: 400 configs from 486 strata
+- D6 capacity: 36 contexts × 10 seed pairs = 360 nominal, 258 retained
+- D6 placement: 12 contexts × 10 seed pairs = 120 nominal, 82 retained
+- Memory threshold: 3,840 runs per implementation, 480 curves, 356 interior cases
+
+VERIFICATION STATUS:
+- Numbers in abstract match numbers in body: YES
+- Numbers in body match numbers in tables: PARTIAL (some tables not yet regenerated from raw data)
+- All references checked: YES
+- No undefined \ref commands: YES (compiled clean)
+- No overfull tables: YES (compiled clean)
+
+MISSING ARTIFACTS:
+- Raw simulation datasets (not yet deposited)
+- Frozen simulator revision (not yet archived)
+- Dependency lockfile (not yet committed)
+- Complete seed/configuration ledger (not yet deposited)
+- Figure-generation scripts verified against deposited data (not yet done)
+- D6 variant label mapping documentation (WQ/Harm → D6-S/D6-P)

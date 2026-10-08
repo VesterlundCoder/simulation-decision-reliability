@@ -1,0 +1,48 @@
+CHANGES LOG — Paper 2 (SMPT)
+==============================
+
+Revision from manuscript2_v0.1.tex to paper_2_smpt.tex
+Date: 8 October 2026
+
+STRUCTURAL CHANGES:
+
+1. TITLE: Changed
+   - Old: "Does a Design Decision Survive Noise, Analyst Choices, and Model Switching?"
+   - New: "Assessing Decision Reliability in Discrete-Event Simulation: A Quantum-Network Case Study"
+
+2. ABSTRACT: Rewritten to match conservative PDF
+   - Removed: 50.7% any-change, 42.0% analyst, 35.5% metric (moved to body)
+   - Removed: Cohen's kappa 0.055/0.000, decision transfer 0%/15% (moved to body)
+   - Removed: 72%/28%/7% variance fractions (removed pending reconciled manifest)
+   - Removed: "0 events in 150 runs" (replaced with careful wording)
+   - Removed: robust optimization negative result
+   - Added: "The full protocol and simple averaging achieve the same agreement"
+   - Added: "50.8% of 356 matched interior cases differ by at least a factor of four"
+   - Added: "methodological contribution is an auditable separation"
+
+3. CONCLUSION: Rewritten to match PDF
+   - Old: strong claims about fragility, model switching, robust optimization
+   - New: "seed averaging can substantially improve label repeatability without establishing correctness in another model"
+   - New: "The full protocol matches the same-budget averaging baseline; no additional labeling advantage is demonstrated"
+
+4. SEQUENCE SECTION: Renamed to "Limits of Independent Validation"
+   - Clarified: Smodels = 2, not 3
+   - Clarified: SeQUeNCe and SimQN produce bit-identical traces (pseudoreplication)
+   - Clarified: component adapter does NOT execute native protocol events
+   - Full native-protocol validation: future work
+
+5. D6 SECTION: Corrected variant labels
+   - D6-S: serial generation, 1s storage cutoff
+   - D6-P: parallel generation, 10^9 s storage cutoff
+   - These are NOT the WestQuant/Harmonized adapter semantics
+   - Archived WQ/Harm labels refer to D6-S/D6-P
+
+6. DATA AVAILABILITY: Updated to honest status
+   - Old: claimed data already available
+   - New: "repository scaffold prepared; raw datasets not yet deposited"
+
+7. DATE: Updated from "7 October 2026" to "8 October 2026"
+
+8. COMPANION WORK: Added explicit relationship to Paper A
+
+9. LIMITATIONS: Expanded with 11 items matching PDF

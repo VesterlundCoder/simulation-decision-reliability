@@ -1,0 +1,52 @@
+Submission Checklist — Paper 2 (SMPT)
+=======================================
+
+Date: 8 October 2026
+Status: NOT YET READY
+
+MANUSCRIPT:
+[x] Title: "Assessing Decision Reliability in Discrete-Event Simulation"
+[x] Abstract matches PDF
+[x] Date: 8 October 2026
+[x] Author: David Vesterlund, Vesterlund Ventures, WestQuant Open
+[x] ORCID: 0009-0000-6455-1141
+[x] Email: david@vesterlundventures.se
+[x] Compiles with tectonic (exit 0)
+[x] No undefined references
+[x] No overfull tables
+[x] All figures present in figures/
+
+CONTENT:
+[x] Title updated to SMPT framing
+[x] Abstract updated to conservative version
+[x] Conclusion updated to match PDF
+[x] D6 variant labels clarified (D6-S/D6-P)
+[x] SeQUeNCe section renamed "Limits of Independent Validation"
+[x] Smodels = 2 clearly stated
+[x] "0 events in 150 runs" removed
+[x] Robust optimization claims removed
+[x] 72%/28%/7% variance fractions removed
+[x] Honest data availability statement
+[x] Companion work disclosure
+
+JOURNAL REQUIREMENTS:
+[ ] SMPT Guide for Authors verified
+[ ] Article type confirmed
+[ ] Abstract format confirmed
+[ ] Keywords confirmed
+[ ] Highlights prepared
+[ ] Reference style confirmed
+[ ] AI declaration confirmed
+
+REPRODUCIBILITY:
+[ ] Raw data deposited
+[ ] Frozen simulator archived
+[ ] Dependency lockfile committed
+[ ] Seed/configuration ledger deposited
+[ ] Figure scripts verified against deposited data
+[ ] Public release URL obtained
+[ ] Archival DOI obtained
+
+BLOCKERS:
+1. Data deposit not yet done
+2. Journal instructions not yet verified (403 errors)

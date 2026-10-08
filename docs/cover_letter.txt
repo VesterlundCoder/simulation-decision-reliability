@@ -1,0 +1,23 @@
+Cover Letter — Paper 2
+=======================
+
+To the Editor, Simulation Modelling Practice and Theory
+
+Dear Editor,
+
+I submit the manuscript "Assessing Decision Reliability in Discrete-Event Simulation: A Quantum-Network Case Study" for consideration at Simulation Modelling Practice and Theory.
+
+The manuscript presents a workflow for separating stochastic repeatability, analyst-choice sensitivity, model dependence, and metric-definition incompatibility in discrete-event simulation. The methodological contribution is an auditable procedure with explicit estimands, campaign identifiers, independent selection/evaluation seeds, and claim-level provenance. A quantum-network case study illustrates the approach.
+
+Key findings: across 400 configurations, a two-pool experiment increases label agreement from 71.5% with a single seed to 95.8% with 20-seed averaging. The full protocol and simple averaging achieve the same agreement, so the improvement is attributable to replication rather than a uniquely superior labeling rule. In a finite-grid memory analysis, 50.8% of 356 matched interior cases differ by at least a factor of four between model variants. The study explicitly identifies that two framework adapters share the same reference logic (Smodels = 2, not 3) and do not constitute independent model replications.
+
+A companion manuscript, "Memory Physics, Finite Capacity, and Topology in Heterogeneous Quantum Networks," is being prepared for submission to Quantum Reports. The present article focuses on decision reliability, metric semantics, and model sensitivity. Shared simulator infrastructure and overlapping validation results are disclosed to both editors.
+
+The raw simulation datasets, frozen simulator, and figure-generation scripts are being prepared for a public reproducibility release. Full native-protocol execution and hardware validation remain future work.
+
+I declare no external funding. I am the developer of the WestQuant simulator, which creates a potential conflict of interest.
+
+Sincerely,
+David Vesterlund
+Vesterlund Ventures, WestQuant Open
+ORCID: 0009-0000-6455-1141

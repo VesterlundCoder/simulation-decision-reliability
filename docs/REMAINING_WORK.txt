@@ -1,0 +1,47 @@
+REMAINING WORK — Paper 2 (SMPT)
+================================
+
+Status: 8 October 2026
+State: NOT YET READY for submission
+
+BLOCKERS (must resolve before submission):
+
+1. DATA DEPOSIT
+   - Raw simulation datasets not yet deposited in public release
+   - Frozen simulator revision not yet archived
+   - Dependency lockfile not yet committed
+   - Complete seed/configuration ledger not yet deposited
+   - Figure-generation scripts not yet verified against deposited data
+   Blocker: Public release URL, commit ID, checksums, DOI needed
+
+2. EXPERIMENT PROVENANCE
+   - A/B experiment: 400 configs × 40 seeds × 8 runs = 128,000 nominal — verify from raw data
+   - Pilot: 40 configs × 5 seeds — verify separation from evaluation set
+   - Noise experiment: 400 configs from 486 strata — verify coverage
+   - D6 capacity: 36 contexts × 10 seed pairs = 360 nominal, 258 retained — verify exclusions
+   - D6 placement: 12 contexts × 10 seed pairs = 120 nominal, 82 retained — verify exclusions
+   - Memory threshold: 3,840 runs per implementation, 480 curves, 356 interior cases — verify
+
+3. METRIC DEFINITIONS
+   - A_req, A_qual denominators need per-campaign documentation
+   - 2,000 requests vs T_obs = 200s: which stops the experiment?
+   - Warmup handling per campaign
+   - Deadline violation: failure or exclusion from denominator?
+
+4. D6 VARIANT LABELS
+   - D6-S: serial generation, 1s storage cutoff
+   - D6-P: parallel generation, 10^9 s storage cutoff
+   - Archived WQ/Harm labels refer to D6-S/D6-P, not WestQuant/Harmonized
+   - Must document this mapping clearly
+
+5. JOURNAL REQUIREMENTS
+   - SMPT Guide for Authors not yet verified (403 errors)
+   - Article type, abstract, keywords, highlights, reference style not confirmed
+   - Author affiliation/address to be confirmed
+
+NON-BLOCKING (recommended but not required for submission):
+
+- Full native SeQUeNCe protocol validation: future work
+- Hardware-calibrated validation: future work
+- Robust optimization: claims removed, no re-run needed
+- Factorial variance fractions: removed pending reconciled manifest

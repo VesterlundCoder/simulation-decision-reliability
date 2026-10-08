@@ -1,0 +1,12 @@
+Highlights — Paper 2 (SMPT)
+===========================
+
+1. A workflow separates stochastic repeatability, analyst-choice sensitivity, model dependence, and metric-definition incompatibility in discrete-event simulation.
+
+2. Seed averaging increases label agreement from 71.5% to 95.8%, but the full protocol matches simple averaging—no additional labeling advantage is demonstrated.
+
+3. Two framework adapters share the same reference logic (S_models = 2, not 3); treating them as independent would be pseudoreplication.
+
+4. In a finite-grid memory analysis, 50.8% of 356 matched interior cases differ by at least a factor of four between model variants.
+
+5. Full native-protocol execution and hardware validation remain future work; the contribution is an auditable separation procedure, not a validated simulator comparison.
